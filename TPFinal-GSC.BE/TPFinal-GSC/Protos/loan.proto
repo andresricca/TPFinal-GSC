@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option csharp_namespace = "TPFinal_GSC.Protos";
+
+service LoanService{
+	rpc LoanReturn (LoanRequest) returns (LoanResponse);
+}
+
+message LoanRequest{
+	int32 id = 1;
+}
+
+message LoanResponse{
+	string message = 1;
+}

@@ -1,0 +1,26 @@
+<mat-card>
+  <mat-card-title>Login</mat-card-title>
+<mat-card-content>
+  <form [formGroup]="loginForm" #form="ngForm" (ngSubmit)="submit()">
+    <p>
+      <mat-form-field>
+        <input type="text" matInput placeholder="Usuario" formControlName="username">
+      </mat-form-field>
+    </p>
+
+    <p>
+      <mat-form-field>
+        <input type="password" matInput placeholder="Contraseña" formControlName="password">
+      </mat-form-field>
+    </p>
+
+    <p *ngIf="error" class="error">
+      {{ error }}
+    </p>
+
+    <div class="button">
+      <button [disabled]="!form.valid" mat-raised-button color="primary">Ingresar</button>
+    </div>
+  </form>
+</mat-card-content>
+</mat-card>

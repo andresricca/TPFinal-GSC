@@ -1,0 +1,34 @@
+<mat-card>
+    <mat-card-title>ABM Personas</mat-card-title>
+    <div class="button">
+      <button mat-raised-button color="primary" (click)="create()">
+        Crear
+      </button>
+    </div>
+  <mat-card-content>
+    <table class="mat-elevation-z8">
+      <tr>
+        <th> Nombre </th>
+        <th> Email </th>
+        <th> Teléfono </th>
+        <th></th>
+        <th></th>
+      </tr>
+      <tr *ngFor="let person of people$ | async">
+        <td> {{person.name}} </td>
+        <td> {{person.email}} </td>
+        <td> {{person.phone}} </td>
+        <td>
+          <button mat-icon-button>
+            <mat-icon aria-label="Editar" [routerLink]="['/edit', person.id]">edit</mat-icon>
+          </button>
+        </td>
+        <td>
+          <button mat-icon-button color="warn" (click)="delete(person.id)">
+            <mat-icon aria-label="Eliminar">delete</mat-icon>
+          </button>
+        </td>
+      </tr>
+    </table>
+  </mat-card-content>
+  </mat-card>

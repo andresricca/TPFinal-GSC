@@ -1,0 +1,32 @@
+:host {
+    display: flex;
+    justify-content: center;
+    margin: 100px 0px;
+  }
+
+  mat-card-title,
+  mat-card-content {
+    display: flex;
+    justify-content: center;
+  }
+
+  mat-icon {
+    padding: 8px;
+  }
+
+  table {
+    width: 100%;
+    min-width: 600px;
+  }
+
+  td {
+    display: table-cell;
+    vertical-align: inherit;
+    text-align: center;
+  }
+
+  .button {
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 16px;
+  }
